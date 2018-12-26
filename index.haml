@@ -1,0 +1,42 @@
+!!!5
+%html{class:"no-js", lang:"es"}
+    %head
+        %meta{charset:"utf-8"}
+        %title La mejor comida en Restaurante Facilito
+        %meta{name:"description", content:"Come rico en el mejor restaurante de la ciudad, servicio de primera."}
+        %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+        %link{rel:"stylesheet", href:"css/normalize.css"}
+        %link{rel:"stylesheet", href:"css/bootstrap.css"}
+        %link{rel:"stylesheet", href:"css/flexboxgrid-6.3.1/css/flexboxgrid.min.css"}
+        %link{rel:"stylesheet", href:"css/style.css"}
+        %script{src:"js/vendor/modernizr-3.6.0.min.js"}
+    %body
+        ="<!--[if lt IE 9]>"
+        %p{class:"browserupgrade"}
+            Estás usando un navegador
+            %strong desactualizado.
+            Por favor
+            %a{href:"http://browsehappy.com/"}
+                actualiza tu navegador
+            para una mejor experiencia
+        ="<![endif]-->"
+        .video-container
+            %video{autoplay:true, width:"1280", height:"720",poster:"",loop:true}
+                %source{src:"videos/mp4/out-camping.mp4",typ:"video/mp4"}
+                %source{src:"videos/webm/out-camping.webm",typ:"video/webm"}
+        .row.full-height.middle-xs.center-xs.relative.up
+            .col-xs-12
+                .box.white-text
+                    %img{src:"imgs/logo.png", width:180}
+                    %h1.dancing-script.title.no-margin Restaurante Don Tiqui
+                    %p#is-open 
+                        %i.glyphicon.glyphicon-time
+                        Abierto Ahora
+            %nav.fixed.top.right.navigation.white-text#navigation
+                -menu = ["Inicio","Menu","Galeria","Contacto","Como llegar"]
+                %ul.list-inline
+                    -menu.each do |item|
+                        %li
+                            %a= item
+            .absolute.medium.black.large-padding.buttom.white-text.full-width#description
+                Atencion calida y comida preparada por especialistas
