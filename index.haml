@@ -28,8 +28,8 @@
             .col-xs-12
                 .box.white-text
                     %img{src:"imgs/logo.png", width:180}
-                    %h1.dancing-script.title.no-margin Restaurante Don Tiqui
-                    %p#is-open 
+                    %h1.dancing-script.title.no-margin Restaurante Tuchis
+                    %p#is-open.white-text.medium
                         %i.glyphicon.glyphicon-time
                         Abierto Ahora
             %nav.fixed.top.right.navigation.white-text#navigation
@@ -37,6 +37,28 @@
                 %ul.list-inline
                     -menu.each do |item|
                         %li
-                            %a= item
-            .absolute.medium.black.large-padding.buttom.white-text.full-width#description
-                Atencion calida y comida preparada por especialistas
+                            %a{}= item
+            .absolute.black.large-padding.white-text.full-width#description                
+                .row.middle-xs.center-xs
+                    .col-xs7.col-md-6.white-text.medium
+                        Atencion calida y comida preparada por especialistas
+                    .col-xs.hidden#sticky-navigation
+                        .box
+                            %nav.text-right.navigation
+                                %ul.list-inline
+                                    -menu.each do |item|
+                                        %li
+                                            %a{}= item
+        .full-height
+
+
+
+
+        // First try loading jQuery CDN
+        %script{src:"https://code.jquery.com/jquery-3.3.1.js",
+        integrity:"sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=",
+        crossorigin:"anonymous"}
+        // Fall back to a local copy of jQuery if the CDN fails
+        %script 
+            window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
+        %script{src:"dist/main.js"}

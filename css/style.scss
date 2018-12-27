@@ -149,6 +149,18 @@ textarea {
     }
 }
 
+#description{
+    ul{
+        margin: 0px;
+    }
+    &.absolute{
+        bottom: 0px;
+    }
+    &.fixed{
+        top: 0px;
+    }
+}
+
 
  /* ==========================================================================
    Helper classes
@@ -241,7 +253,8 @@ textarea {
  */
 
  .hidden {
-  display: none !important;
+  //display: none !important;
+  display: none;
 }
 
 /*

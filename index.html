@@ -33,8 +33,8 @@ para una mejor experiencia
 <div class='col-xs-12'>
 <div class='box white-text'>
 <img src='imgs/logo.png' width='180'>
-<h1 class='dancing-script title no-margin'>Restaurante Don Tiqui</h1>
-<p id='is-open'>
+<h1 class='dancing-script title no-margin'>Restaurante Tuchis</h1>
+<p class='white-text medium' id='is-open'>
 <i class='glyphicon glyphicon-time'></i>
 Abierto Ahora
 </p>
@@ -59,9 +59,44 @@ Abierto Ahora
 </li>
 </ul>
 </nav>
-<div class='absolute medium black large-padding buttom white-text full-width' id='description'>
+<div class='absolute black large-padding white-text full-width' id='description'>
+<div class='row middle-xs center-xs'>
+<div class='col-xs7 col-md-6 white-text medium'>
 Atencion calida y comida preparada por especialistas
 </div>
+<div class='col-xs hidden' id='sticky-navigation'>
+<div class='box'>
+<nav class='text-right navigation'>
+<ul class='list-inline'>
+<li>
+<a>Inicio</a>
+</li>
+<li>
+<a>Menu</a>
+</li>
+<li>
+<a>Galeria</a>
+</li>
+<li>
+<a>Contacto</a>
+</li>
+<li>
+<a>Como llegar</a>
+</li>
+</ul>
+</nav>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class='full-height'></div>
+<!-- / First try loading jQuery CDN -->
+<script crossorigin='anonymous' integrity='sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=' src='https://code.jquery.com/jquery-3.3.1.js'></script>
+<!-- / Fall back to a local copy of jQuery if the CDN fails -->
+<script>
+window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
+</script>
+<script src='dist/main.js'></script>
 </body>
 </html>
