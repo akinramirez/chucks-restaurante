@@ -1,3 +1,4 @@
+-gallery_images = ["club-sandwich.jpg","papas.jpg","hamburger.jpg","panini.jpg","club-sandwich.jpg","papas.jpg"]
 !!!5
 %html{class:"no-js", lang:"es"}
     %head
@@ -5,6 +6,7 @@
         %title La mejor comida en Restaurante Facilito
         %meta{name:"description", content:"Come rico en el mejor restaurante de la ciudad, servicio de primera."}
         %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+        %meta{:"data-name" => "image-counter", content:"#{gallery_images.size-1}"}
         %link{rel:"stylesheet", href:"css/normalize.css"}
         %link{rel:"stylesheet", href:"css/bootstrap.css"}
         %link{rel:"stylesheet", href:"css/flexboxgrid-6.3.1/css/flexboxgrid.min.css"}
@@ -24,7 +26,7 @@
             %video{autoplay:true, width:"1280", height:"720",poster:"",loop:true}
                 %source{src:"videos/mp4/out-camping.mp4",typ:"video/mp4"}
                 %source{src:"videos/webm/out-camping.webm",typ:"video/webm"}
-        .row.full-height.middle-xs.center-xs.relative.up
+        .row.full-height.middle-xs.center-xs.relative.up#home
             .col-xs-12
                 .box.white-text
                     %img{src:"imgs/logo.png", width:180}
@@ -49,8 +51,22 @@
                                     -menu.each do |item|
                                         %li
                                             %a{}= item
-        .full-height
-
+        .text-center.relative#menu
+            .absolute.white#menu-title
+                %h2.dancing-script.title Menu
+                -menu_photos = [{title: "Club Sandwich", pricing: "10.00",image:"club-sandwich"},{title: "Combo hamburguesa", pricing: "50.00",image:"combo"},{title: "Hamburguesa", pricing: "20.00",image:"hamburger"},{title: "Hot cakes", pricing: "30.00",image:"hot-cakes"},{title: "Panini", pricing: "15.00",image:"panini"},{title: "Papas", pricing: "10.00",image:"papas"},{title: "Club Sandwich", pricing: "10.00",image:"club-sandwich"},{title: "Hamburguesa", pricing: "20.00",image:"hamburger"}]
+            .row
+                -menu_photos.each do |photo|
+                    .col-md-4.col-lg-3.col-sm-6.col-xs-12.food{style:"background-image:url(imgs/food/#{photo[:image]}-thumb.jpg)"}
+                        .screen
+                            .row.middle-xs.full-height
+                                .col-xs-12
+                                    %h3.dancing-script.white-text.text-center.subtitle= photo[:title]
+                                    %p.no-margin.white-text.text-center.medium= "L." + photo[:pricing]
+        #gallery
+            .inner
+                -gallery_images.each do |image|
+                    .image{style:"background-image:url(imgs/food/#{image})"}
 
 
 
