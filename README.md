@@ -5,6 +5,12 @@
 - https://coverr.co/
 - http://flexboxgrid.com/
 - Google Fonts
+- Formspree (https://formspree.io/)
+
+
+## Repos
+- https://github.com/tim-montague/form_object
+- https://github.com/tim-montague/form_object/blob/master/form_object.js
 
 
 ## Instalacion requeridas

@@ -5,7 +5,7 @@
     "@babel/preset-env": "^7.2.3"
   },
   "scripts": {
-      "build": "babel js/vendor/main.js -d dist --watch",
+      "build": "babel js/*.js -d dist --watch",
       "sass": "sass --watch css/style.scss:css/style.css",
       "haml": "haml index.haml index.html",
       "init-sass-babel": "npm run build && npm run sass"

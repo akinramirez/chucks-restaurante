@@ -188,6 +188,54 @@ Atencion calida y comida preparada por especialistas
 <div class='image' style='background-image:url(imgs/food/papas.jpg)'></div>
 </div>
 </div>
+<div class='container'>
+<div class='card white black-text text-center relative'>
+<h3 class='medium slim'>
+En
+<strong class='dancing-script medium'>Restaurante Tuchis</strong>
+cocinar no es una profesion, no es una tecnica, es un
+<strong class='dancing-script medium'>arte</strong>
+</h3>
+<p class='top-space'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore aspernatur quod doloribus natus ut pariatur iste laborum, numquam rerum asperiores, id architecto? Modi consectetur, corrupti quod alias eos voluptates? Nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum vitae perspiciatis placeat commodi odit quo maiores error. Temporibus officiis vel fugit ex unde. Vero repellendus magni aperiam est in tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+<strong class='dancing-script medium'>- Rick - Chef</strong>
+</div>
+</div>
+<div class='black white-text full-height' id='contact'>
+<div class='row middle-xs full-height'>
+<div class='col-xs-12'>
+<div class='box'>
+<p class='text-center medium' id='info-contacto'>Presiona enter para llenar el campo correspondiente y enviarnos un correo</p>
+<form action='https://formspree.io/akin.ramirez@hotmail.com' class='step-form' id='contact-form' method='POST'>
+<div class='row center-xs'>
+<div class='col-xs-2 col-md-1 text-center'>
+<div class='box'>
+<div class='path-step active'></div>
+<br>
+<div class='path-step'></div>
+<br>
+<div class='path-step'></div>
+<br>
+</div>
+</div>
+<div class='col-xs-5'>
+<div class='box'>
+<fieldset class='step active'>
+<input class='input' name='email' placeholder='Correo electronico' required type='email'>
+</fieldset>
+<fieldset class='step'>
+<input class='input' name='name' placeholder='Nombre' required type='text'>
+</fieldset>
+<fieldset class='step'>
+<textarea class='input' name='body' placeholder='Mensaje ...' required></textarea>
+</fieldset>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
 <!-- / First try loading jQuery CDN -->
 <script crossorigin='anonymous' integrity='sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=' src='https://code.jquery.com/jquery-3.3.1.js'></script>
 <!-- / Fall back to a local copy of jQuery if the CDN fails -->
@@ -195,5 +243,7 @@ Atencion calida y comida preparada por especialistas
 window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
 </script>
 <script src='dist/main.js'></script>
+<script src='dist/form_object.js'></script>
+<script src='dist/steps.js'></script>
 </body>
 </html>

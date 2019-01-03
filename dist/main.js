@@ -5,7 +5,13 @@
 (function () {
   var sticky = false;
   var currentPosition = 0;
-  var imageCounter = parseInt($("[data-name='image-counter']").attr("content")); // console.log($(window).height());
+  var imageCounter = parseInt($("[data-name='image-counter']").attr("content"));
+  var correo = "akin.ramirez@hotmail.com";
+  $("#contact-form").on("submit", function (ev) {
+    ev.preventDefault();
+    sendForm($(this));
+    return false;
+  }); // console.log($(window).height());
 
   $("#sticky-navigation").removeClass("hidden");
   $("#sticky-navigation").slideUp(0);

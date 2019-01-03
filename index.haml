@@ -67,6 +67,41 @@
             .inner
                 -gallery_images.each do |image|
                     .image{style:"background-image:url(imgs/food/#{image})"}
+        .container
+            .card.white.black-text.text-center.relative
+                %h3.medium.slim
+                    En
+                    %strong.dancing-script.medium Restaurante Tuchis
+                    cocinar no es una profesion, no es una tecnica, es un
+                    %strong.dancing-script.medium arte
+                %p.top-space Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore aspernatur quod doloribus natus ut pariatur iste laborum, numquam rerum asperiores, id architecto? Modi consectetur, corrupti quod alias eos voluptates? Nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum vitae perspiciatis placeat commodi odit quo maiores error. Temporibus officiis vel fugit ex unde. Vero repellendus magni aperiam est in tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit.                
+                %strong.dancing-script.medium - Rick - Chef
+        .black.white-text.full-height#contact
+            .row.middle-xs.full-height
+                .col-xs-12
+                    .box
+                        %p.text-center.medium#info-contacto Presiona enter para llenar el campo correspondiente y enviarnos un correo
+                        %form{action:"https://formspree.io/akin.ramirez@hotmail.com",method:"POST",id:"contact-form",class:"step-form"}                            
+                            .row.center-xs
+                                .col-xs-2.col-md-1.text-center
+                                    .box
+                                        -3.times do |i|
+                                            -if i == 0
+                                                .path-step.active
+                                            -else
+                                                .path-step
+                                            %br
+                                .col-xs-5
+                                    .box
+                                        %fieldset.step.active
+                                            %input{type:"email",name:"email",placeholder:"Tu Correo electronico",class:"input", required:true}
+                                        %fieldset.step
+                                            %input{type:"text",name:"name",placeholder:"Tu Nombre",class:"input", required:true}
+                                        %fieldset.step
+                                            %textarea{name:"body",placeholder:"Tu Mensaje ...",class:"input", required:true}
+                                        -# %div
+                                        -#     %button{type:"submit",class:"btn"} Enviar
+                                        
 
 
 
@@ -78,3 +113,5 @@
         %script 
             window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
         %script{src:"dist/main.js"}
+        %script{src:"dist/form_object.js"}
+        %script{src:"dist/steps.js"}
