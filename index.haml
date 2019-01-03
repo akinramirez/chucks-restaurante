@@ -80,7 +80,7 @@
             .row.middle-xs.full-height
                 .col-xs-12
                     .box
-                        %p.text-center.medium#info-contacto Presiona enter para llenar el campo correspondiente y enviarnos un correo
+                        %p.text-center.medium2#info-contacto Presiona enter para llenar el campo correspondiente y enviarnos un correo
                         %form{action:"https://formspree.io/akin.ramirez@hotmail.com",method:"POST",id:"contact-form",class:"step-form"}                            
                             .row.center-xs
                                 .col-xs-2.col-md-1.text-center
@@ -111,7 +111,7 @@
         crossorigin:"anonymous"}
         // Fall back to a local copy of jQuery if the CDN fails
         %script 
-            window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
-        %script{src:"dist/main.js"}
+            window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')        
         %script{src:"dist/form_object.js"}
+        %script{src:"dist/main.js"}
         %script{src:"dist/steps.js"}

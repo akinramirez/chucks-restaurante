@@ -169,8 +169,8 @@ textarea {
   padding: 2em; }
 
 .path-step {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1em;
+  height: 1em;
   border-radius: 50%;
   background-color: #a2a2a2;
   display: inline-block;
@@ -188,22 +188,25 @@ textarea {
 
 .step-form .step {
   margin: 0px;
-  max-height: 0px;
+  max-height: 150px;
   overflow: hidden;
-  transition: all 1s;
-  margin: 0px; }
-  .step-form .step.active {
-    padding: 1em 0.5em;
-    max-height: 150px; }
+  transition: all 0.4s;
+  padding: 1em 0.5em; }
+  .step-form .step:not(.active) {
+    padding: 0px;
+    max-height: 0px; }
   .step-form .step input, .step-form .step textarea {
     margin: 0px;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 0.5em;
     border: none;
     outline: none;
     border-bottom: solid 1px #eee;
     background-color: transparent;
+    transition: background-color 0.3s;
     width: 100%; }
+    .step-form .step input:focus, .step-form .step textarea:focus {
+      border-bottom: solid 1px #69f0ae; }
 
 #contact {
   margin-top: -100px; }
@@ -238,6 +241,9 @@ textarea {
 
 .medium, .navigation li {
   font-size: 1.2em; }
+
+.medium2 {
+  font-size: 1.5em; }
 
 .slim {
   font-weight: 200; }
