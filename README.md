@@ -6,6 +6,8 @@
 - http://flexboxgrid.com/
 - Google Fonts
 - Formspree (https://formspree.io/)
+- leafletjs (https://leafletjs.com/)
+- Leaflet Routing Machine (http://www.liedman.net/leaflet-routing-machine/)
 
 
 ## Repos

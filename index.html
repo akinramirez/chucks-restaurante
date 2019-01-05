@@ -9,6 +9,8 @@
 <link href='css/normalize.css' rel='stylesheet'>
 <link href='css/bootstrap.css' rel='stylesheet'>
 <link href='css/flexboxgrid-6.3.1/css/flexboxgrid.min.css' rel='stylesheet'>
+<link href='css/leaflet.css' rel='stylesheet'>
+<link href='css/leaflet-routing-machine.css' rel='stylesheet'>
 <link href='css/style.css' rel='stylesheet'>
 <script src='js/vendor/modernizr-3.6.0.min.js'></script>
 </head>
@@ -236,12 +238,19 @@ cocinar no es una profesion, no es una tecnica, es un
 </div>
 </div>
 </div>
+<div id='location'>
+<div id='map'></div>
+<div class='black large-padding white-text text-center medium' id='message'></div>
+</div>
 <!-- / First try loading jQuery CDN -->
 <script crossorigin='anonymous' integrity='sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=' src='https://code.jquery.com/jquery-3.3.1.js'></script>
 <!-- / Fall back to a local copy of jQuery if the CDN fails -->
 <script>
 window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
 </script>
+<script src='js/vendor/leaflet.js'></script>
+<script src='js/vendor/leaflet-routing-machine.js'></script>
+<script src='dist/maps.js'></script>
 <script src='dist/form_object.js'></script>
 <script src='dist/main.js'></script>
 <script src='dist/steps.js'></script>

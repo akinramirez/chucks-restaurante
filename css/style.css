@@ -158,6 +158,14 @@ textarea {
     background-position: center;
     background-repeat: no-repeat; }
 
+#location {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: -50px; }
+
+#map {
+  height: 500px; }
+
 /* ==========================================================================
   Helper classes
   ========================================================================== */

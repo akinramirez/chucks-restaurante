@@ -10,6 +10,8 @@
         %link{rel:"stylesheet", href:"css/normalize.css"}
         %link{rel:"stylesheet", href:"css/bootstrap.css"}
         %link{rel:"stylesheet", href:"css/flexboxgrid-6.3.1/css/flexboxgrid.min.css"}
+        %link{rel:"stylesheet", href:"css/leaflet.css"}
+        %link{rel:"stylesheet", href:"css/leaflet-routing-machine.css"}
         %link{rel:"stylesheet", href:"css/style.css"}
         %script{src:"js/vendor/modernizr-3.6.0.min.js"}
     %body
@@ -101,9 +103,9 @@
                                             %textarea{name:"body",placeholder:"Tu Mensaje ...",class:"input", required:true}
                                         -# %div
                                         -#     %button{type:"submit",class:"btn"} Enviar
-                                        
-
-
+        #location
+            #map
+            #message.black.large-padding.white-text.text-center.medium 
 
         // First try loading jQuery CDN
         %script{src:"https://code.jquery.com/jquery-3.3.1.js",
@@ -112,6 +114,10 @@
         // Fall back to a local copy of jQuery if the CDN fails
         %script 
             window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')        
+        -# %script{src:"https://maps.googleapis.com/maps/api/js?key=[API-KEY]]"}
+        %script{src:"js/vendor/leaflet.js"}
+        %script{src:"js/vendor/leaflet-routing-machine.js"}
+        %script{src:"dist/maps.js"}
         %script{src:"dist/form_object.js"}
         %script{src:"dist/main.js"}
         %script{src:"dist/steps.js"}
