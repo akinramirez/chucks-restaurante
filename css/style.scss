@@ -184,7 +184,7 @@ textarea {
 
 #menu-title{
     width: 300px;
-    z-index: 5;
+    z-index: 4;
     top:50%;
     left: calc(50% - 150px);
     top:calc(50% - 2.5em);
@@ -219,6 +219,10 @@ textarea {
 
 #map{
     height: 500px;
+    z-index: 4;
+}
+#menu-opener{
+    display: none;
 }
 
  /* ==========================================================================
@@ -240,7 +244,7 @@ textarea {
     height: 1em;
     border-radius: 50%;
     background-color: #a2a2a2;
-    display: inline-block;
+    display: block;
     margin-top: 2em;
     opacity: 0.4s;
     transition: all 0.4s;
@@ -486,6 +490,56 @@ textarea {
 
    @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (max-height:600px){
+    #contact, .container .card{
+        margin-top: -15%;
+    }
+}
+
+@media only screen and (max-width:960px){
+    #navigation{
+        display: none !important;
+    }
+
+    #menu-opener{
+        display: block;
+    }
+    .path-step{
+        display: inline-block;
+        margin-right: 2em;
+    }
+    #responsive-nav{
+        ul{
+            position: absolute;
+            width: 100%;
+            font-size: 1.5em;
+            top: 55px;
+            background-color: #222;
+            left: 0px;
+            text-align: center;
+            max-height: 0px;
+            overflow: hidden;
+            transition: all 0.4s;
+            &.active{
+                max-height: 80vh;
+            }
+            li{
+                display: block;
+                margin-top: 1em;
+                padding: 10px 15px;                
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:500px){
+    #responsive-nav{
+        ul{
+            top:95px;
+        }
+    }
 }
 
 @media print,

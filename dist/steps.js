@@ -48,7 +48,7 @@
     $next_step.addClass("active");
     $next_step.find(".input").focus(); //Coordinar los circulos
 
-    var posicion = $next_step.index(".step") * 2 + 1;
+    var posicion = $next_step.index(".step") + 1;
     var $circle = $(".path-step:nth-child(" + posicion + ")");
     focus_circle($circle);
   }

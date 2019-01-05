@@ -1,5 +1,9 @@
 "use strict";
 
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register("/sw.js");
+}
+
 ;
 
 (function () {
@@ -15,6 +19,10 @@
 
   $("#sticky-navigation").removeClass("hidden");
   $("#sticky-navigation").slideUp(0);
+  checkScroll();
+  isOpen();
+  $("#menu-opener").on("click", toggleNav);
+  $(".menu-link").on("click", toggleNav);
   setInterval(function () {
     if (currentPosition < imageCounter) {
       currentPosition++;
@@ -26,7 +34,9 @@
       left: "-" + currentPosition * 100 + "%"
     });
   }, 4000);
-  $(window).scroll(function () {
+  $(window).scroll(checkScroll);
+
+  function checkScroll() {
     // console.log(isInBottom());
     var inBottom = isInBottom();
 
@@ -43,7 +53,23 @@
 
       unStickNavigation();
     }
-  });
+  }
+
+  function isOpen() {
+    // Reloj 24 => 5pm 11pm=> 17 23
+    var date = new Date();
+    var current_hour = date.getHours();
+    console.log(current_hour);
+
+    if (current_hour < 17 || current_hour > 23) {
+      $("#is-open .text").html("Cerrado Ahora <br> Abierto de 5:00pm a 11:00pm");
+    }
+  }
+
+  function toggleNav() {
+    $("#responsive-nav ul").toggleClass("active");
+    $("#menu-opener").toggleClass("glyphicon-menu-hamburger");
+  }
 
   function stickNavigation() {
     // sticky = true;

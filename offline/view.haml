@@ -1,0 +1,36 @@
+!!!5
+%html{class:"no-js", lang:"es"}
+    %head
+        %meta{charset:"utf-8"}
+        %title La mejor comida en Restaurante Facilito
+        %meta{name:"description", content:"Come rico en el mejor restaurante de la ciudad, servicio de primera."}
+        %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+        %link{rel:"stylesheet", href:"/offline/style.css"}
+    %body
+        ="<!--[if lt IE 9]>"
+        %p{class:"browserupgrade"}
+            Estás usando un navegador
+            %strong desactualizado.
+            Por favor
+            %a{href:"http://browsehappy.com/"}
+                actualiza tu navegador
+            para una mejor experiencia
+        ="<![endif]-->"
+        %p#message Parece que no pudimos conectarnos a internet, no hay problema aqui esta la informacion que necesitas.
+        .container
+            %h1 Restaurante Tuchis
+            %p 
+                %strong Direccion 
+                Barrio La Leona al frente del parque.
+            %p 
+                %strong Horario 
+                10am - 10pm
+            %p 
+                %strong Telefono 
+                (+504) 99999999
+            %p 
+                %strong Descripcion 
+                Servimos comida hecha por artistas, ven y prueba la mejor hamburguesa en nuestro clasico Tuchis Restaurante, o unas papas como nunca antes.
+            #map
+                %img{src:"/offline/map.png"}
+                %p Este mapa ofrece referencia del lugar del Restaurante

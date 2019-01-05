@@ -35,24 +35,25 @@
                     %h1.dancing-script.title.no-margin Restaurante Tuchis
                     %p#is-open.white-text.medium
                         %i.glyphicon.glyphicon-time
-                        Abierto Ahora
+                        %span.text Abierto Ahora
             %nav.fixed.top.right.navigation.white-text#navigation
-                -menu = ["Inicio","Menu","Galeria","Contacto","Como llegar"]
+                -menu = [{title:"Home", link:"#home"},{title:"Menu", link:"#menu"},{title:"Galeria", link:"#gallery"},{title:"Contacto", link:"#contact"},{title:"Como llegar", link:"#location"},]
                 %ul.list-inline
                     -menu.each do |item|
                         %li
-                            %a{}= item
+                            %a{href:item[:link]}= item[:title]
             .absolute.black.large-padding.white-text.full-width#description                
                 .row.middle-xs.center-xs
                     .col-xs7.col-md-6.white-text.medium
                         Atencion calida y comida preparada por especialistas
                     .col-xs.hidden#sticky-navigation
                         .box
-                            %nav.text-right.navigation
+                            %nav.text-right.navigation#responsive-nav
+                                %i.glyphicon.glyphicon-menu-hamburger.white-text.subtitle.glyphicon.glyphicon-remove#menu-opener
                                 %ul.list-inline
                                     -menu.each do |item|
                                         %li
-                                            %a{}= item
+                                            %a.menu-link{href:item[:link]}= item[:title]
         .text-center.relative#menu
             .absolute.white#menu-title
                 %h2.dancing-script.title Menu
@@ -78,6 +79,7 @@
                     %strong.dancing-script.medium arte
                 %p.top-space Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore aspernatur quod doloribus natus ut pariatur iste laborum, numquam rerum asperiores, id architecto? Modi consectetur, corrupti quod alias eos voluptates? Nemo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum vitae perspiciatis placeat commodi odit quo maiores error. Temporibus officiis vel fugit ex unde. Vero repellendus magni aperiam est in tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit.                
                 %strong.dancing-script.medium - Rick - Chef
+                .large-padding.medium.black.white-text.text-center Tambien puedes acceder a este sitio sin conexion a internet
         .black.white-text.full-height#contact
             .row.middle-xs.full-height
                 .col-xs-12
@@ -85,15 +87,14 @@
                         %p.text-center.medium2#info-contacto Presiona enter para llenar el campo correspondiente y enviarnos un correo
                         %form{action:"https://formspree.io/akin.ramirez@hotmail.com",method:"POST",id:"contact-form",class:"step-form"}                            
                             .row.center-xs
-                                .col-xs-2.col-md-1.text-center
+                                .col-xs-12.col-sm-2.col-md-1.first-sm
                                     .box
                                         -3.times do |i|
                                             -if i == 0
                                                 .path-step.active
                                             -else
                                                 .path-step
-                                            %br
-                                .col-xs-5
+                                .col-xs-12.col-sm-3.first-xs
                                     .box
                                         %fieldset.step.active
                                             %input{type:"email",name:"email",placeholder:"Tu Correo electronico",class:"input", required:true}
