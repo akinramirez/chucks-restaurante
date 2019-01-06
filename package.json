@@ -2,12 +2,25 @@
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3"
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0"
   },
   "scripts": {
-      "build": "babel js/*.js -d dist --watch",
-      "sass": "sass --watch css/style.scss:css/style.css",
-      "haml": "haml index.haml index.html",
-      "init-sass-babel": "npm run build && npm run sass"
+    "build": "babel js/*.js -d dist --watch",
+    "sass": "sass --watch css/style.scss:css/style.css",
+    "haml": "haml index.haml index.html",
+    "webpack": "webpack"
+  },
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.2.0",
+    "gulp-uglify": "^3.0.1",
+    "install": "^0.12.2",
+    "npm": "^6.5.0"
   }
 }

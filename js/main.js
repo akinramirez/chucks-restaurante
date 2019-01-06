@@ -60,7 +60,7 @@ if(navigator.serviceWorker){
         // Reloj 24 => 5pm 11pm=> 17 23
         const date = new Date();
         const current_hour = date.getHours();
-        console.log(current_hour);
+        
         if(current_hour < 17 || current_hour > 23){
             $("#is-open .text").html("Cerrado Ahora <br> Abierto de 5:00pm a 11:00pm");
         }
