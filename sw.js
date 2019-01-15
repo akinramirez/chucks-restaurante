@@ -2,10 +2,10 @@ const CACHE_NAME = "restaurant-v1"
 const cacheUrls = ["/offline/view.html","/offline/style.css","/offline/map.png"];
 
 self.addEventListener('install', function(ev) {
-    console.log("SW instalado");
+    // console.log("SW instalado");
     caches.open(CACHE_NAME)
         .then(function(cache) {
-          console.log('Cache abierto');
+        //   console.log('Cache abierto');
           return cache.addAll(cacheUrls);
         });
   });

@@ -11,6 +11,12 @@ if (navigator.serviceWorker) {
   var currentPosition = 0;
   var imageCounter = parseInt($("[data-name='image-counter']").attr("content"));
   var correo = "akin.ramirez@hotmail.com";
+  $(document).ready(function () {
+    $('.my-background-video').bgVideo({
+      fadeIn: 2000,
+      showPausePlay: false
+    });
+  });
   $("#contact-form").on("submit", function (ev) {
     ev.preventDefault();
     sendForm($(this));

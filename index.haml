@@ -9,9 +9,10 @@
         %meta{:"data-name" => "image-counter", content:"#{gallery_images.size-1}"}
         %link{rel:"stylesheet", href:"css/normalize.css"}
         %link{rel:"stylesheet", href:"css/bootstrap.css"}
-        %link{rel:"stylesheet", href:"css/flexboxgrid-6.3.1/css/flexboxgrid.min.css"}
+        %link{rel:"stylesheet", href:"css/flexboxgrid.css"}
         %link{rel:"stylesheet", href:"css/leaflet.css"}
         %link{rel:"stylesheet", href:"css/leaflet-routing-machine.css"}
+        %link{rel:"stylesheet", href:"css/jquery.background-video.css"}
         %link{rel:"stylesheet", href:"css/style.css"}
         %script{src:"js/vendor/modernizr-3.6.0.min.js"}
     %body
@@ -24,10 +25,10 @@
                 actualiza tu navegador
             para una mejor experiencia
         ="<![endif]-->"
-        .video-container
-            %video{autoplay:true, width:"1280", height:"720",poster:"",loop:true}
-                %source{src:"videos/mp4/out-camping.mp4",typ:"video/mp4"}
-                %source{src:"videos/webm/out-camping.webm",typ:"video/webm"}
+        .video-container.element-with-video-bg.jquery-background-video-wrapper
+            %video.my-background-video.jquery-background-video{autoplay:true, muted:true, poster:"videos/images/out-camping.jpg", loop:true}
+                %source{src:"videos/mp4/out-camping.mp4",type:"video/mp4"}
+                %source{src:"videos/webm/out-camping.webm",type:"video/webm"}
         .row.full-height.middle-xs.center-xs.relative.up#home
             .col-xs-12
                 .box.white-text
@@ -60,7 +61,7 @@
                 -menu_photos = [{title: "Club Sandwich", pricing: "10.00",image:"club-sandwich"},{title: "Combo hamburguesa", pricing: "50.00",image:"combo"},{title: "Hamburguesa", pricing: "20.00",image:"hamburger"},{title: "Hot cakes", pricing: "30.00",image:"hot-cakes"},{title: "Panini", pricing: "15.00",image:"panini"},{title: "Papas", pricing: "10.00",image:"papas"},{title: "Club Sandwich", pricing: "10.00",image:"club-sandwich"},{title: "Hamburguesa", pricing: "20.00",image:"hamburger"}]
             .row
                 -menu_photos.each do |photo|
-                    .col-md-4.col-lg-3.col-sm-6.col-xs-12.food{style:"background-image:url(imgs/food/#{photo[:image]}-thumb.jpg)"}
+                    .col-md-6.col-lg-3.col-sm-6.col-xs-12.food{style:"background-image:url(imgs/food/#{photo[:image]}-thumb.jpg)"}
                         .screen
                             .row.middle-xs.full-height
                                 .col-xs-12
@@ -85,7 +86,7 @@
                 .col-xs-12
                     .box
                         %p.text-center.medium2#info-contacto Presiona enter para llenar el campo correspondiente y enviarnos un correo
-                        %form{action:"https://formspree.io/akin.ramirez@hotmail.com",method:"POST",id:"contact-form",class:"step-form"}                            
+                        %form{action:"",method:"POST",id:"contact-form",class:"step-form"}                            
                             .row.center-xs
                                 .col-xs-12.col-sm-2.col-md-1.first-sm
                                     .box
@@ -106,19 +107,18 @@
                                         -#     %button{type:"submit",class:"btn"} Enviar
         #location
             #map
-            #message.black.large-padding.white-text.text-center.medium 
-
+            #message.black.large-padding.white-text.text-center.medium
         // First try loading jQuery CDN
         %script{src:"https://code.jquery.com/jquery-3.3.1.js",
         integrity:"sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=",
         crossorigin:"anonymous"}
         // Fall back to a local copy of jQuery if the CDN fails
         %script 
-            window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')        
-        -# %script{src:"https://maps.googleapis.com/maps/api/js?key=[API-KEY]]"}
+            window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
         %script{src:"js/vendor/leaflet.js"}
         %script{src:"js/vendor/leaflet-routing-machine.js"}
-        %script{src:"dist/maps.js"}
+        %script{src:"js/vendor/jquery.background-video.js"}
         %script{src:"dist/form_object.js"}
-        %script{src:"dist/main.js"}
         %script{src:"dist/steps.js"}
+        %script{src:"dist/maps.js"}
+        %script{src:"dist/main.js"}

@@ -8,9 +8,10 @@
 <meta content='5' data-name='image-counter'>
 <link href='css/normalize.css' rel='stylesheet'>
 <link href='css/bootstrap.css' rel='stylesheet'>
-<link href='css/flexboxgrid-6.3.1/css/flexboxgrid.min.css' rel='stylesheet'>
+<link href='css/flexboxgrid.css' rel='stylesheet'>
 <link href='css/leaflet.css' rel='stylesheet'>
 <link href='css/leaflet-routing-machine.css' rel='stylesheet'>
+<link href='css/jquery.background-video.css' rel='stylesheet'>
 <link href='css/style.css' rel='stylesheet'>
 <script src='js/vendor/modernizr-3.6.0.min.js'></script>
 </head>
@@ -26,10 +27,10 @@ actualiza tu navegador
 para una mejor experiencia
 </p>
 <![endif]-->
-<div class='video-container'>
-<video autoplay height='720' loop poster='' width='1280'>
-<source src='videos/mp4/out-camping.mp4' typ='video/mp4'>
-<source src='videos/webm/out-camping.webm' typ='video/webm'>
+<div class='video-container element-with-video-bg jquery-background-video-wrapper'>
+<video autoplay class='my-background-video jquery-background-video' loop muted poster='videos/images/out-camping.jpg'>
+<source src='videos/mp4/out-camping.mp4' type='video/mp4'>
+<source src='videos/webm/out-camping.webm' type='video/webm'>
 </video>
 </div>
 <div class='row full-height middle-xs center-xs relative up' id='home'>
@@ -99,7 +100,7 @@ Atencion calida y comida preparada por especialistas
 <h2 class='dancing-script title'>Menu</h2>
 </div>
 <div class='row'>
-<div class='col-md-4 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/club-sandwich-thumb.jpg)'>
+<div class='col-md-6 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/club-sandwich-thumb.jpg)'>
 <div class='screen'>
 <div class='row middle-xs full-height'>
 <div class='col-xs-12'>
@@ -109,7 +110,7 @@ Atencion calida y comida preparada por especialistas
 </div>
 </div>
 </div>
-<div class='col-md-4 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/combo-thumb.jpg)'>
+<div class='col-md-6 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/combo-thumb.jpg)'>
 <div class='screen'>
 <div class='row middle-xs full-height'>
 <div class='col-xs-12'>
@@ -119,7 +120,7 @@ Atencion calida y comida preparada por especialistas
 </div>
 </div>
 </div>
-<div class='col-md-4 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/hamburger-thumb.jpg)'>
+<div class='col-md-6 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/hamburger-thumb.jpg)'>
 <div class='screen'>
 <div class='row middle-xs full-height'>
 <div class='col-xs-12'>
@@ -129,7 +130,7 @@ Atencion calida y comida preparada por especialistas
 </div>
 </div>
 </div>
-<div class='col-md-4 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/hot-cakes-thumb.jpg)'>
+<div class='col-md-6 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/hot-cakes-thumb.jpg)'>
 <div class='screen'>
 <div class='row middle-xs full-height'>
 <div class='col-xs-12'>
@@ -139,7 +140,7 @@ Atencion calida y comida preparada por especialistas
 </div>
 </div>
 </div>
-<div class='col-md-4 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/panini-thumb.jpg)'>
+<div class='col-md-6 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/panini-thumb.jpg)'>
 <div class='screen'>
 <div class='row middle-xs full-height'>
 <div class='col-xs-12'>
@@ -149,7 +150,7 @@ Atencion calida y comida preparada por especialistas
 </div>
 </div>
 </div>
-<div class='col-md-4 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/papas-thumb.jpg)'>
+<div class='col-md-6 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/papas-thumb.jpg)'>
 <div class='screen'>
 <div class='row middle-xs full-height'>
 <div class='col-xs-12'>
@@ -159,7 +160,7 @@ Atencion calida y comida preparada por especialistas
 </div>
 </div>
 </div>
-<div class='col-md-4 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/club-sandwich-thumb.jpg)'>
+<div class='col-md-6 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/club-sandwich-thumb.jpg)'>
 <div class='screen'>
 <div class='row middle-xs full-height'>
 <div class='col-xs-12'>
@@ -169,7 +170,7 @@ Atencion calida y comida preparada por especialistas
 </div>
 </div>
 </div>
-<div class='col-md-4 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/hamburger-thumb.jpg)'>
+<div class='col-md-6 col-lg-3 col-sm-6 col-xs-12 food' style='background-image:url(imgs/food/hamburger-thumb.jpg)'>
 <div class='screen'>
 <div class='row middle-xs full-height'>
 <div class='col-xs-12'>
@@ -209,7 +210,7 @@ cocinar no es una profesion, no es una tecnica, es un
 <div class='col-xs-12'>
 <div class='box'>
 <p class='text-center medium2' id='info-contacto'>Presiona enter para llenar el campo correspondiente y enviarnos un correo</p>
-<form action='https://formspree.io/akin.ramirez@hotmail.com' class='step-form' id='contact-form' method='POST'>
+<form action='' class='step-form' id='contact-form' method='POST'>
 <div class='row center-xs'>
 <div class='col-xs-12 col-sm-2 col-md-1 first-sm'>
 <div class='box'>
@@ -249,9 +250,10 @@ window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/
 </script>
 <script src='js/vendor/leaflet.js'></script>
 <script src='js/vendor/leaflet-routing-machine.js'></script>
-<script src='dist/maps.js'></script>
+<script src='js/vendor/jquery.background-video.js'></script>
 <script src='dist/form_object.js'></script>
-<script src='dist/main.js'></script>
 <script src='dist/steps.js'></script>
+<script src='dist/maps.js'></script>
+<script src='dist/main.js'></script>
 </body>
 </html>

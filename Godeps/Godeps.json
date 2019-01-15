@@ -1,9 +1,0 @@
-{
-    "ImportPath": "restaurant-site",
-    "GoVersion": "go1.5",
-    "GodeVersion": "v74",
-    "Packages": [
-        "./..."
-    ],
-    "Deps":[]
-}

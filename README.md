@@ -1,4 +1,4 @@
-## Herramientas 
+## Herramientas
 - ColorPicker
 - https://color.adobe.com/create/color-wheel/
 - HTML5 Boilerplate (https://github.com/h5bp/html5-boilerplate)
@@ -63,3 +63,15 @@ ES6-->ES5 (BABEL)
 https://www.youtube.com/watch?v=YNnE5FS79KQ&list=PLhSj3UTs2_yX_ct0OfHrmMwKL8wpz-N2j&index=2
 https://www.youtube.com/watch?v=KGjS6oTgOwQ&index=3&list=PLhSj3UTs2_yX_ct0OfHrmMwKL8wpz-N2j
 Comando ==> npm run build (build es depende si asi lo nombro en package.json)
+
+## Despliegue Firebase
+- Crear tu proyecto en el sitio de Firebase en la parte de consola
+- Instalar el paquete => npm install -g firebase-tools
+- Iniciar sesion => firebase login
+- Listar los proyectos en el sitio de firebase => firebase list
+- Iniciar => firebase init => seleccionar "Hosting" => Seleccionar el proyecto que ha creado
+- Agregar el directorio publico => "/"
+- SPA => (y/n) => n
+- Sobreescribir el archivo index.html => (y/n) => n
+- Si quiere visualizar como se ve el proyecto puede levantar un lite server => firebase server
+- Hacer deploy => firebase deploy --only hosting

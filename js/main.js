@@ -7,7 +7,14 @@ if(navigator.serviceWorker){
     let currentPosition = 0;
     const imageCounter = parseInt($("[data-name='image-counter']").attr("content"));
     const correo = "akin.ramirez@hotmail.com";
-    
+
+    $(document).ready(function(){
+        $('.my-background-video').bgVideo({
+            fadeIn: 2000,
+            showPausePlay: false   
+        });
+    });
+
     $("#contact-form").on("submit",function(ev){
         ev.preventDefault();
         sendForm($(this));
@@ -91,6 +98,5 @@ if(navigator.serviceWorker){
         const descriptionHeight = $description.height();
         
         return $(window).scrollTop() > $(window).height() - (descriptionHeight *2);
-    }
-    
+    }   
 })();

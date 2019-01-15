@@ -64,17 +64,19 @@
 
     function enviar_formulario(){
         const $form = $(selector);
-        //console.log($form.formObject());
+        // const formData = $(selector).serialize();
         $.ajax({
-            url: $form.attr("action"),
-            method:"POST",
+            type: "POST",
+            url: "https://rock-n-roll-up.000webhostapp.com/go.php",
             data:$form.formObject(),
-            dataType:"json",
-            success:function(){
-                $form.slideUp();
-                $("#info-contacto").html("Enviamos tu mensaje, pronto nos pondremos en contacto contigo");
+            dataType: 'json',
+            cache: false,
+            success : function(data){             
+                if (data.success == "ok"){                   
+                    $form.slideUp();
+                    $("#info-contacto").html("Enviamos tu mensaje, pronto nos pondremos en contacto contigo");
+                }
             }
         });
     }
-    
 })();
