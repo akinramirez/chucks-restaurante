@@ -5,7 +5,6 @@
 - https://coverr.co/
 - http://flexboxgrid.com/
 - Google Fonts
-- Formspree (https://formspree.io/)
 - leafletjs (https://leafletjs.com/)
 - Leaflet Routing Machine (http://www.liedman.net/leaflet-routing-machine/)
 
@@ -13,6 +12,10 @@
 ## Repos
 - https://github.com/tim-montague/form_object
 - https://github.com/tim-montague/form_object/blob/master/form_object.js
+
+
+## Plugin
+- https://github.com/BGStock/jquery-background-video
 
 
 ## Instalacion requeridas
@@ -41,6 +44,7 @@ npm install --save-dev @babel/core @babel/cli @babel/preset-env
 - SASS (https://sass-lang.com/)
 - Bootstrap 3 Customize (https://getbootstrap.com/docs/3.4/customize/)
 - jQuery 3.3.1 (https://jquery.com | https://code.jquery.com/)
+- Service Worker API
 
 ## Extenciones Visual Code
 - Better Haml
