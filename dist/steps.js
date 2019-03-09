@@ -61,9 +61,11 @@
   function enviar_formulario() {
     var $form = $(selector); // const formData = $(selector).serialize();
 
+    var urlhttp = "http://contacform.cf/go.php";
+    var urlhttps = "https://contactform001.000webhostapp.com/go.php";
     $.ajax({
       type: "POST",
-      url: "http://contacform.cf/go.php",
+      url: urlhttps,
       data: $form.formObject(),
       dataType: 'json',
       cache: false,
