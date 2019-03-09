@@ -31,9 +31,9 @@
 
     // Agregar el marcador de la posicion
     L.marker([lugar_destino.lat,lugar_destino.lng]).addTo(map)
-        // .bindPopup('<strong>Restaurante Tuchis</strong>')
+        // .bindPopup('<strong>Restaurante Chucks</strong>')
         //.openPopup()
-        .bindTooltip('<strong>Restaurante Tuchis</strong>')
+        .bindTooltip('<strong>Restaurante Chucks</strong>')
         // .openTooltip();
     UserLocation.get((coords)=>{
         let lugar_origen = {
@@ -74,7 +74,7 @@
             document.querySelector("#message").innerHTML = `
                                                             Estas a ${HoraMinutos} de una noche inolvidable en
                                                             <span class="dancing-script medium">
-                                                                Restaurante Tuchis
+                                                                Restaurante Chucks
                                                             </span>
                                                             `;
         }).route();

@@ -1,4 +1,5 @@
 const CACHE_NAME = "restaurant-v1"
+// Load Page Lite
 const cacheUrls = ["/offline/view.html","/offline/style.css","/offline/map.png"];
 
 self.addEventListener('install', function(ev) {

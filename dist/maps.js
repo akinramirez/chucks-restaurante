@@ -47,9 +47,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {//attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map); // Agregar el marcador de la posicion
 
-  L.marker([lugar_destino.lat, lugar_destino.lng]).addTo(map) // .bindPopup('<strong>Restaurante Tuchis</strong>')
+  L.marker([lugar_destino.lat, lugar_destino.lng]).addTo(map) // .bindPopup('<strong>Restaurante Chucks</strong>')
   //.openPopup()
-  .bindTooltip('<strong>Restaurante Tuchis</strong>'); // .openTooltip();
+  .bindTooltip('<strong>Restaurante Chucks</strong>'); // .openTooltip();
 
   UserLocation.get(function (coords) {
     var lugar_origen = {
@@ -84,7 +84,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         HoraMinutos = t + ' ' + 'Segundos';
       }
 
-      document.querySelector("#message").innerHTML = "\n                                                            Estas a ".concat(HoraMinutos, " de una noche inolvidable en\n                                                            <span class=\"dancing-script medium\">\n                                                                Restaurante Tuchis\n                                                            </span>\n                                                            ");
+      document.querySelector("#message").innerHTML = "\n                                                            Estas a ".concat(HoraMinutos, " de una noche inolvidable en\n                                                            <span class=\"dancing-script medium\">\n                                                                Restaurante Chucks\n                                                            </span>\n                                                            ");
     }).route(); // Para que no aparezca el recuadro y los datos de las rutas si agregar ==>.route();
     // Para que el recuadro con la informacion de las rutas aparezca en el mapa ==>.addTo(map);
   });

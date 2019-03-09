@@ -1,9 +1,8 @@
-;(function(){
-    
+;(function(){    
     const selector = "#contact-form";
 
     $(".step textarea").on("keydown",(ev)=>{
-        if(ev.keyCode == 13){
+        if(ev.keyCode == 13 || ev.keyCode == 9 || ev.keyCode == 229){
             ev.preventDefault();
             $(ev.target).blur();
         }
@@ -67,7 +66,7 @@
         // const formData = $(selector).serialize();
         $.ajax({
             type: "POST",
-            url: "https://rock-n-roll-up.000webhostapp.com/go.php",
+            url: "http://contacform.cf/go.php",
             data:$form.formObject(),
             dataType: 'json',
             cache: false,
