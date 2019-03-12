@@ -5,7 +5,8 @@
 (function () {
   var selector = "#contact-form";
   $(".step textarea").on("keydown", function (ev) {
-    if (ev.keyCode == 13 || ev.keyCode == 9 || ev.keyCode == 229) {
+    // if(ev.keyCode == 13 || ev.keyCode == 9 || ev.keyCode == 229){
+    if (ev.keyCode == 13 || ev.keyCode == 229) {
       ev.preventDefault();
       $(ev.target).blur();
     }
